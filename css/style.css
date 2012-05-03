@@ -217,20 +217,27 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author:
    ========================================================================== */
+body {
+	margin-top: 40px;
+	background: url(../img/960grid.png) 0 0 no-repeat transparent;
+	}
 
+.button {
+	display: inline-block;
+	color: #fff;
 
-
-
-
-
-
-
-
-
-
-
-
-
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C1FA3B), color-stop(0.02, #8FCA05), to(#5A7F03));
+	-webkit-border-radius: .2em;
+	-webkit-box-shadow: #7EB105 0 0 .03em 0.03em inset, rgba(0, 0, 0, 0.4) 0px 0.1em .2em;
+	text-shadow: rgba(0,0,0,.2) 0 .05em .02em;
+	border: .08em solid #374D02;
+	padding: .2em .6em;
+	}
+	
+.size-2x {font-size: 200%;}
+.size-2-5x {font-size: 250%;}
+.size-3x {font-size: 300%;}
+.size-4x {font-size: 400%;}
 
 
 /* ==|== media queries ======================================================
