@@ -1,0 +1,76 @@
+/*----------------------------------------------------------------------------------------
+Strictly use meta viewport and max/min dimensions. NOT 'device-width'
+http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html
+Dimensions taken from twitter bootstrap, which seem to work
+
+UP TO LANDSCAPE PHONES
+	- portrait phones
+	- landscape phones
+------------------------------------------------------------*/
+@media only screen
+and (max-width : 480px) {
+	
+	html {font-size: 150%;}
+	
+	body::before {
+        content: "up to landscape phone";
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    	}
+}
+
+/*-----------------------------------------------------------
+PORTRAIT TABLET TO DEFAULT DESKTOP
+	- portrait tablets
+	- landscape tablets
+	- smaller desktops
+------------------------------------------------------------*/
+@media only screen
+and (min-width: 768px) and (max-width: 979px) {
+	body::before {
+        content: "portrait tablet to default desktop";
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    	}
+
+}
+
+/*-----------------------------------------------------------
+RETINA, UP TO DEFAULT DESKTOP
+	- portrait retina
+	- landscape reina
+	- smaller desktop retina (if such a thing exists)
+------------------------------------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5) and (min-width: 768px) and (max-width: 979px),
+only screen and (min-device-pixel-ratio : 1.5) and (min-width: 768px) and (max-width: 979px) {
+	
+	html {font-size: 120%;}
+	
+	body::before {
+        content: "retina tablet up to portrait";
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    	}
+
+}
